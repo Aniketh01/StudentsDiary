@@ -6,12 +6,34 @@ public class Profile {
 		 private String DOB;
 		 private String age;
 		 
-		 public Profile() {}
+//		 public Profile() {}
 
 		 public Profile(String name, String DOB, String age) {
-			 name = this.name;
-			 DOB = this.DOB;
-			 age = this.age;
+			 this.name = name;
+			 this.DOB = DOB;
+			 this.age = age;
+		 }
+		 
+		 public void addProfile(String name, String DOB, String age) {
+			 this.name = name;
+			 this.DOB = DOB;
+			 this.age = age;
+		 }
+		 
+		 public String getName() {
+			 return name;
+		 }
+		 
+		 public String getDOB() {
+			 return DOB;
+		 }
+		 
+		 public String getAge() {
+			 return age;
+		 }
+		 
+		 public void Display() {
+			 System.out.println("Name:" + " " + name + " " + "Age:" + " " + age + " " + "DOB:" + " " + DOB);
 		 }
 	}
 
