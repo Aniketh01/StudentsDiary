@@ -5,16 +5,13 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.io.Serializable;
 
 public class Main {
 	
-	private static final String StudentPro = "StudentProfile.txt";
-	
 	public static void main(String[] args) throws IOException{
 		
-		File newFile = new File(StudentPro);
-		FileReader file = new FileReader(newFile);
+		final String StudentPro = "/home/aniketh/devel/src/StudentsDiary/StudentsDiary/src/org/amrita/u4cse16209/StudentsDiary/StudentProfile.dat";
+		FileReader file = new FileReader(StudentPro);
 		BufferedReader buffer = new BufferedReader(file);
 		
 		String line = null;
@@ -25,7 +22,7 @@ public class Main {
 		
 		while((line = buffer.readLine()) != null) {
 			String[] words = line.split(",");
-			List.add(prof);
+			
 		}
 		
 		buffer.close();
