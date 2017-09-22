@@ -9,15 +9,14 @@ import java.util.ArrayList;
 
 public class Main {
 	
-	public final static String PATH = "/home/aniketh/devel/src/StudentsDiary/StudentsDiary/src/org/amrita/u4cse16209/StudentsDiary/";
-	
 	public static void main(String[] args) throws IOException, FileNotFoundException{
 		
-		Profile profile = new Profile();
+		String basePath = new File("src/org/amrita/u4cse16209/StudentsDiary/StudentProfile.txt").getAbsolutePath();
 		
-		final String FileName = PATH + "StudentProfile.txt";
-		File newcreate = new File(FileName);
-		FileReader file = new FileReader(newcreate);
+//		System.out.print(basePath);
+		
+		File ProfileFile = new File(basePath);
+		FileReader file = new FileReader(ProfileFile);
 		BufferedReader buffer = new BufferedReader(file);
 				
 		ArrayList<Profile> List = new ArrayList<Profile>();
