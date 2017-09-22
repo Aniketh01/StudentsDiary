@@ -21,6 +21,13 @@ public class Profile {
 			return null;
 		 }
 		 
+		 @Override
+		 public String toString() {
+		     return "Student Name: " + this.getName() + 
+		            ", Student DOB: " + this.getDOB() +
+		            ", Student Age: " + this.getAge();
+		 }
+		 
 		 public String getName() {
 			 return name;
 		 }

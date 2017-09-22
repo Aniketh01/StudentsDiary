@@ -25,8 +25,12 @@ public class Main {
 		
 		while((line = buffer.readLine()) != null){
 			String[] words = line.split(",");	
-			Profile item = profile.addProfile(words[0], words[1], words[2]);
-			List.add(item);
+//			Profile item = profile.addProfile(words[0], words[1], words[2]);
+			List.add(new Profile(words[0], words[1], words[2]));
+		}
+		
+		for (int i = 0; i < List.size(); i++) {
+			System.out.println(List.get(i));
 		}
 		
 		buffer.close();
