@@ -6,7 +6,7 @@ public class Profile {
 		 private String DOB;
 		 private String age;
 		 
-//		 public Profile() {}
+		 public Profile() {}
 
 		 public Profile(String name, String DOB, String age) {
 			 this.name = name;
@@ -14,10 +14,11 @@ public class Profile {
 			 this.age = age;
 		 }
 		 
-		 public void addProfile(String name, String DOB, String age) {
+		 public Profile addProfile(String name, String DOB, String age) {
 			 this.name = name;
 			 this.DOB = DOB;
 			 this.age = age;
+			return null;
 		 }
 		 
 		 public String getName() {
