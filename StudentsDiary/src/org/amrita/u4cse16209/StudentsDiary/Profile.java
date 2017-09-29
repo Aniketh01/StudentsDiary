@@ -1,3 +1,9 @@
+/**
+ * @author Aniketh Girish
+ * This class is used to get/set personal profile data of a particular student 
+ * according to the data provided.
+ */
+
 package org.amrita.u4cse16209.StudentsDiary;
 
 public class Profile {

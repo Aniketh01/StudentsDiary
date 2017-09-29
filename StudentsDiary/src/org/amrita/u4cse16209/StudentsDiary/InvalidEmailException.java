@@ -1,3 +1,9 @@
+/**
+ * @author Aniketh Girish
+ * Implements a custom Exception condition on for detecting Invalid Email
+ * Address. 
+ */
+
 package org.amrita.u4cse16209.StudentsDiary;
 
 public class InvalidEmailException extends Exception{

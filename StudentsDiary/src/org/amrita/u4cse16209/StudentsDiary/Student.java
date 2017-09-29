@@ -1,3 +1,9 @@
+/**
+ * @author Aniketh Girish
+ * Student Class manages most of the details regarding the student accordance with the
+ * college related profile rather than any person data.
+ */
+
 package org.amrita.u4cse16209.StudentsDiary;
 
 import java.io.Serializable;

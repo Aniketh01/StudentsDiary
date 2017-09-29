@@ -1,3 +1,10 @@
+/**
+ * @author Aniketh Girish
+ * Main class manages the whole project. Every call each class create to get 
+ * or retrieve data is through this main class. Writing to the database and reading 
+ * from the particular databases are also cover through this main class itself. 
+ */
+
 package org.amrita.u4cse16209.StudentsDiary;
 
 // To Read from a file.
