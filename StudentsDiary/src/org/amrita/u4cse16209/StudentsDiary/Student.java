@@ -1,6 +1,8 @@
 package org.amrita.u4cse16209.StudentsDiary;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable{
 	private String studentName;
     private String studentNo;
     private String email;
