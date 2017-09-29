@@ -11,19 +11,27 @@ import java.io.FileNotFoundException;
 import java.lang.IndexOutOfBoundsException;
 import java.util.InputMismatchException;
 
-// To Write into a file.
-import java.io.FileWriter;
+import java.io.Serializable;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
+
+// To Write into a file.
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Main {
+public class Main implements Serializable {
 	
 	// This denotes to the path of the package
 	public static final String rootpath = "src/org/amrita/u4cse16209/StudentsDiary/";
 	
-	public static void main(String[] args) throws IOException, FileNotFoundException{
+	public static void main(String[] args) throws IOException, FileNotFoundException, InputMismatchException{
 		
 		// Main section Student profile.
 		
@@ -52,10 +60,9 @@ public class Main {
 		
 		// Main section for the Student Data.
 		
-		String DataBasePath = new File(rootpath + "StudentData.txt").getAbsolutePath();
+		String DataBasePath = new File(rootpath + "StudentData.ser").getAbsolutePath();
 		
-	    ArrayList<Student> Data = new ArrayList<Student>();      
-
+	    ArrayList<Student> Data = new ArrayList<Student>();   
 	    Scanner input = new Scanner(System.in);
 	    
 	    Student student = new Student();
@@ -69,33 +76,62 @@ public class Main {
 	    
 	    try {
 	    	
-	    	for (int i = 0; i < count; i++) {
+	    	FileOutputStream f = new FileOutputStream(DataBasePath);
+			ObjectOutputStream oos = new ObjectOutputStream(f);
+	    	
+	    for (int i = 0; i < count; i++) {
           
-	    		System.out.println("Enter details for student: " + (i + 1));
+	    	System.out.println("Enter details for student: " + (i + 1));
 
-	    		System.out.println("Enter name: ");
-	    		student.setStudentName(input.next());
+	    	System.out.println("Enter name: ");
+	    	student.setStudentName(input.next());
 
-	    		System.out.println("Enter Number: ");
-	    		student.setStudentNo(input.next());
-            	System.out.println("Search by student number: ");
+	    	System.out.println("Enter Number: ");
+	    	student.setStudentNo(input.next());
+            System.out.println("Search by student number: ");
 
-            	System.out.println("Enter email: ");
-            	student.setEmail(input.next());
+            System.out.println("Enter email: ");
+            student.setEmail(input.next());
 
-            	System.out.println("Enter year: ");
-            	student.setYear(input.nextInt());
+            System.out.println("Enter year: ");
+            student.setYear(input.nextInt());
             
-            	Data.add(student);
-	    	} 
-        
-	    } catch(IndexOutOfBoundsException e) {
+            Data.add(student);      
+	    }
+	    oos.writeObject(Data);
+	    
+//	    for(int i = 0; i < Data.size(); i++) {
+//	    	System.out.println(Data.get(i));
+//		}
+	    
+	    } catch(Exception e) {
 	    	e.printStackTrace();
 	    }
 	    
-		for (int i = 0; i < Data.size(); i++) {
-			System.out.println(Data.get(i));
-		}
+	    try {
+	    	FileInputStream inp = new FileInputStream(DataBasePath);
+	    	ObjectInputStream o = new ObjectInputStream(inp);
+	    	ArrayList<Student> stu = (ArrayList<Student>)o.readObject();
+	    	
+	    	for(Student s : stu) {
+	    		stu.add(s);
+	    	}
+		    for(int i = 0; i < stu.size(); i++) {
+		    	System.out.println(stu.get(i));
+			}
+	    	
+	    } catch (Exception e) {
+	    	e.printStackTrace();
+	    }
+
+	    
+	    
+	    
+	    
+	    
+//		for (int i = 0; i < Data.size(); i++) {
+////			BWriter.write(Data.get(i));
+//		}
 
 
 //        FileWriter writer = new FileWriter(DataBasePath, true);
