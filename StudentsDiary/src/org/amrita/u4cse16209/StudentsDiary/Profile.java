@@ -1,5 +1,6 @@
 /**
- * @author Aniketh Girish
+ * @author 2017 Aniketh Girish anikethgireesh@gmail.com
+ * 
  * This class is used to get/set personal profile data of a particular student 
  * according to the data provided.
  */

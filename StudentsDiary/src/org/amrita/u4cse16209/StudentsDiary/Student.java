@@ -1,5 +1,6 @@
 /**
- * @author Aniketh Girish
+ * @author 2017 Aniketh Girish anikethgireesh@gmail.com
+ * 
  * Student Class manages most of the details regarding the student accordance with the
  * college related profile rather than any person data.
  */

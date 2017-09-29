@@ -1,5 +1,6 @@
 /**
- * @author Aniketh Girish
+ * @author 2017 Aniketh Girish anikethgireesh@gmail.com
+ * 
  * Implements a custom Exception condition on for detecting Invalid Email
  * Address. 
  */
