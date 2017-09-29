@@ -124,38 +124,6 @@ public class Main implements Serializable {
 	    	e.printStackTrace();
 	    }
 
-	    
-	    
-	    
-	    
-	    
-//		for (int i = 0; i < Data.size(); i++) {
-////			BWriter.write(Data.get(i));
-//		}
-
-
-//        FileWriter writer = new FileWriter(DataBasePath, true);
-//	    String str = null;
-//	        
-//	    System.out.println("Type in something");
-//	    
-//	    Scanner scan = new Scanner(System.in);
-//	    scan.useDelimiter("\\n");
-//	    
-//	    System.out.println("Enter DONE to terminate");
-//	    
-//	    while ((str = scan.nextLine()) != null) {
-//	    	if(str.trim().equalsIgnoreCase("done")) {
-//	    		System.out.println("Logging out");
-//	    		System.exit(0);
-//	    	}
-//		    
-//	    }
-//	    writer.write(str);
-//	    writer.close();
-//	    scan.close();
-
-
 	}
 
 }
