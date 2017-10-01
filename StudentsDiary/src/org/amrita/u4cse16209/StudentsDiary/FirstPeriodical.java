@@ -1,3 +1,11 @@
+/**
+ * @author 2017 Aniketh Girish anikethgireesh@gmail.com
+ * 
+ * This class maintains every First Periodical marks of any course provided to it, by the 
+ * student. 
+ * 
+ */
+
 package org.amrita.u4cse16209.StudentsDiary;
 
 import java.util.Scanner; // Need to change this into Arraylist and store it into a file or serialize it.
