@@ -12,6 +12,8 @@ import java.util.Scanner;
 
 public class SecondPeriodical {
 public double mark;
+
+	public SecondPeriodical() {}
 	
 	public SecondPeriodical(int mark) {
 		this.mark = mark;
