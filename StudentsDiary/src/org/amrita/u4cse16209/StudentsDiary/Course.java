@@ -51,7 +51,17 @@ public class Course {
 	
     public String toString()
     {
-        return "Course Name:"+ courseName + " " + "Course Code:" + courseCode + " "+one.toString()+two.toString()+ese.toString()+in.toString()+ca.toString();
+        return "Course Name:"  + 
+        		courseName     +
+        		" " 		   + 
+        		"Course Code:" + 
+        		courseCode 	   + 
+        		" "			   +
+        		one.toString() +
+        		two.toString() +
+        		ese.toString() +
+        		in.toString()  +
+        		ca.toString();
     }
     
     public void Display() {
