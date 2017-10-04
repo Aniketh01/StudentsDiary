@@ -15,6 +15,8 @@ public class FirstPeriodical {
 	
 	public double mark;
 	
+	public FirstPeriodical() {}
+	
 	public FirstPeriodical(int mark) {
 		this.mark = mark;
 	}
