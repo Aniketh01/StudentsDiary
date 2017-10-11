@@ -23,7 +23,7 @@ public class Course {
 	private EndSemesterExam ese;
 	private Internals in;
 	private ContinuousAssessment ca;
-	private GPA gpa;
+	GPA gpa;
 	
 	public Course() {
 		one = new FirstPeriodical();
