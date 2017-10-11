@@ -20,6 +20,7 @@ public class SGPA {
 		for(Course courses: CourseList) {
 			sgpa = courses.gpa.getGPA();
 		}
+		sgpa = sgpa / CourseList.size();
 	}
 	
 	public double getSGPA() {
