@@ -1,3 +1,10 @@
+/**
+ * @author 2017 Aniketh Girish anikethgireesh@gmail.com
+ * 
+ * This class is used to get/set personal data of a particular student 
+ * according to the data provided.
+ */
+
 package org.amrita.u4cse16209.StudentsDiary;
 
 import java.io.FileInputStream;
