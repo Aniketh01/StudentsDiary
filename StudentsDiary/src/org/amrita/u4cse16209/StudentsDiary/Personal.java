@@ -90,8 +90,23 @@ public class Personal implements Serializable {
                 System.out.println("Class not found!");
         }
 	}
+	
+    public void writeToFile() {
+        try {
+                FileOutputStream f = new FileOutputStream("Personal.ser");
+                ObjectOutputStream o = new ObjectOutputStream(f);
+                Personal s = new Personal(phoneNumber, address, email);
+                o.writeObject(s);
+                f.close();
+        }
 
+        catch(FileNotFoundException fof) {
+                System.out.println("File not found!");
+        }
+
+        catch(IOException ioe) {
+                System.out.println("File may be corrupt!");
+        }
 }
 
-
-
+}
