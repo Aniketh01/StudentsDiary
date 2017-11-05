@@ -33,6 +33,6 @@ public class Attendance {
 		else {
 			System.out.println("Enter the type correctly");
 		}
+		in.close();
 	}
-
 }
