@@ -35,4 +35,12 @@ public class Attendance {
 		}
 		in.close();
 	}
+	
+	public String toString() {
+		return date + "\n" + attendance + "\n";
+	}
+	
+	public void Display() {
+		System.out.println("Date and Attendace is:" + toString());
+	}
 }
