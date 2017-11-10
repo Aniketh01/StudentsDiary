@@ -14,13 +14,15 @@ public class Student implements Serializable{
     private String studentNo;
     private String email;
     private int year;
+    private String campus;
     
     @Override
     public String toString() {
          return ("StudentName:"+this.getStudentName()+
                      " Student No: "+ this.getStudentNo() +
                      " Email: "+ this.getEmail() +
-                     " Year : " + this.getYear());
+                     " Year : " + this.getYear() + 
+                     " Campus: " + this.getCampus());
     }
 
     public Student() {
@@ -28,13 +30,15 @@ public class Student implements Serializable{
         this.studentNo = null;
         this.email = null;
         this.year = -1;
+        this.campus = null;
     }
 
-    public Student(String nName, String nNum, String nEmail, int nYr) {
+    public Student(String nName, String nNum, String nEmail, String campus, int nYr) {
         this.studentName = nName;
         this.studentNo = nNum;
         this.email = nEmail;
         this.year = nYr;
+        this.campus = campus;
     }
 
     public void setStudentName(String newStudentName) {
@@ -51,6 +55,14 @@ public class Student implements Serializable{
 
     public void setYear(int newYear) {
         this.year = newYear;
+    }
+    
+    public void setCampus(String campus) {
+    	this.campus = campus;
+    }
+    
+    public String getCampus() {
+    	return campus;
     }
 
     public String getStudentName() {
