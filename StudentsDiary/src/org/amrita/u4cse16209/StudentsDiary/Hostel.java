@@ -28,7 +28,7 @@ public class Hostel {
 	        return "Hostel Name: " + hostelName + "\nRoom no: " + roomNo + "\n";
 	    }
 	    
-	    public void print() {
+	    public void Display() {
 	        System.out.println(this.toString());
 	    }
 }
